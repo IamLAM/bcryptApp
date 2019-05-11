@@ -24,9 +24,9 @@ const someOtherPlaintextPassword = 'pass123';
 //END_ASYNC
 
 //START_SYNC
+var hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
 
-
-
+var result = bcrypt.compareSync(myPlaintextPassword, hash);
 //END_SYNC
 
 
